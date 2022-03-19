@@ -1,0 +1,37 @@
+.boxWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 600px;
+}
+.boxWrapper__inner {
+  width: 500px;
+  height: 400px;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background: #c352c5;
+  -webkit-animation: moveX 3s linear infinite;
+  animation: moveX 3s linear infinite;
+}
+
+@-webkit-keyframes moveX {
+  from {
+    margin-left: 0px;
+  }
+  to {
+    margin-left: 300px;
+  }
+}
+
+@keyframes moveX {
+  from {
+    margin-left: 0px;
+  }
+  to {
+    margin-left: 300px;
+  }
+}
