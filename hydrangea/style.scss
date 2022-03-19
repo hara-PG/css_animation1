@@ -1,0 +1,36 @@
+.block {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #000;
+  .txt {
+    font-family: futura;
+    letter-spacing: 0.1em;
+    font-size: 100px;
+    font-weight: bold;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-image: url(http://ajsai.jp/wp-content/themes/ajsai-theme/images/non-thumbnail.jpg);
+    animation: bgAnimation 10s linear infinite;
+    -webkit-animation: bgAnimation 10s linear infinite;
+  }
+}
+@keyframes bgAnimation {
+  from {
+    background-position: 0px center;
+  }
+  to {
+    background-position: 2000px center;
+  }
+}
+@-webkit-keyframes bgAnimation {
+  from {
+    background-position: 0px center;
+  }
+  to {
+    background-position: 2000px center;
+  }
+}
