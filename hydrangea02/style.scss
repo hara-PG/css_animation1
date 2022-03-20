@@ -12,4 +12,132 @@
   //   -webkit-flex-direction: column;
   //   -ms-flex-direction: column;
   flex-direction: column;
+
+  &__elem {
+    position: relative;
+    overflow: hidden;
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 5px;
+      transition: 1s;
+      background: #cecece;
+      animation: loadaniTop 4000ms ease-out forwards infinite;
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 0;
+      height: 0;
+      transition: 1s;
+      background: #cecece;
+      animation: loadaniRight 4000ms ease-out forwards infinite;
+    }
+  }
+
+  &__inner {
+    position: relative;
+
+    &:before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 0;
+      height: 5px;
+      transition: 1s;
+      background: #cecece;
+      animation: loadaniBottom 4000ms ease-out forwards infinite;
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 5px;
+      height: 0;
+      transition: 1s;
+      background: #cecece;
+      animation: loadaniLeft 4000ms ease-out forwards infinite;
+    }
+
+    &--type2 {
+      z-index: 1;
+      font-family: helvetica, "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3",
+        Meiryo, メイリオ, Osaka, "MS PGothic", arial, sans-serif;
+      font-size: 34px;
+      color: #cecece;
+      text-align: center;
+      font-weight: bold;
+      padding: 15px 24px 16px;
+
+      span {
+        display: block;
+        text-align: center;
+        font-size: 56px;
+        color: #cecece;
+        line-height: 1;
+        margin-top: 9px;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+@keyframes loadaniTop {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 100%;
+    left: 0%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes loadaniRight {
+  0% {
+    height: 0;
+  }
+  50% {
+    height: 100%;
+    top: 0;
+  }
+  100% {
+    top: 100%;
+  }
+}
+
+@keyframes loadaniBottom {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 100%;
+    right: 0;
+  }
+  100% {
+    right: 100%;
+  }
+}
+
+@keyframes loadaniLeft {
+  0% {
+    height: 0;
+  }
+  50% {
+    height: 100%;
+    bottom: 0;
+  }
+  100% {
+    bottom: 100%;
+  }
 }

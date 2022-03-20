@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .loading {
   position: fixed;
   width: 100vw;
@@ -32,8 +33,8 @@
   -webkit-transition: 1s;
   transition: 1s;
   background: #cecece;
-  -webkit-animation: Top 4000ms ease-out forwards infinite;
-          animation: Top 4000ms ease-out forwards infinite;
+  -webkit-animation: loadaniTop 4000ms ease-out forwards infinite;
+          animation: loadaniTop 4000ms ease-out forwards infinite;
 }
 
 .loading__elem:after {
@@ -43,20 +44,166 @@
   right: 0;
   width: 0;
   height: 0;
+  -webkit-transition: 1s;
+  transition: 1s;
   background: #cecece;
-  -webkit-animation: Right 4000ms ease-out forwards infinite;
-          animation: Right 4000ms ease-out forwards infinite;
+  -webkit-animation: loadaniRight 4000ms ease-out forwards infinite;
+          animation: loadaniRight 4000ms ease-out forwards infinite;
 }
 
-@-webkit-keyframes Top {
+.loading__inner {
+  position: relative;
+}
+
+.loading__inner:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0;
+  height: 5px;
+  -webkit-transition: 1s;
+  transition: 1s;
+  background: #cecece;
+  -webkit-animation: loadaniBottom 4000ms ease-out forwards infinite;
+          animation: loadaniBottom 4000ms ease-out forwards infinite;
+}
+
+.loading__inner:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 5px;
+  height: 0;
+  -webkit-transition: 1s;
+  transition: 1s;
+  background: #cecece;
+  -webkit-animation: loadaniLeft 4000ms ease-out forwards infinite;
+          animation: loadaniLeft 4000ms ease-out forwards infinite;
+}
+
+.loading__inner--type2 {
+  z-index: 1;
+  font-family: helvetica, "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", Meiryo, メイリオ, Osaka, "MS PGothic", arial, sans-serif;
+  font-size: 34px;
+  color: #cecece;
+  text-align: center;
+  font-weight: bold;
+  padding: 15px 24px 16px;
+}
+
+.loading__inner--type2 span {
+  display: block;
+  text-align: center;
+  font-size: 56px;
+  color: #cecece;
+  line-height: 1;
+  margin-top: 9px;
+  font-weight: bold;
+}
+
+@-webkit-keyframes loadaniTop {
   0% {
     width: 0;
   }
+  50% {
+    width: 100%;
+    left: 0%;
+  }
+  100% {
+    left: 100%;
+  }
 }
 
-@keyframes Top {
+@keyframes loadaniTop {
   0% {
     width: 0;
+  }
+  50% {
+    width: 100%;
+    left: 0%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+@-webkit-keyframes loadaniRight {
+  0% {
+    height: 0;
+  }
+  50% {
+    height: 100%;
+    top: 0;
+  }
+  100% {
+    top: 100%;
+  }
+}
+
+@keyframes loadaniRight {
+  0% {
+    height: 0;
+  }
+  50% {
+    height: 100%;
+    top: 0;
+  }
+  100% {
+    top: 100%;
+  }
+}
+
+@-webkit-keyframes loadaniBottom {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 100%;
+    right: 0;
+  }
+  100% {
+    right: 100%;
+  }
+}
+
+@keyframes loadaniBottom {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 100%;
+    right: 0;
+  }
+  100% {
+    right: 100%;
+  }
+}
+
+@-webkit-keyframes loadaniLeft {
+  0% {
+    height: 0;
+  }
+  50% {
+    height: 100%;
+    bottom: 0;
+  }
+  100% {
+    bottom: 100%;
+  }
+}
+
+@keyframes loadaniLeft {
+  0% {
+    height: 0;
+  }
+  50% {
+    height: 100%;
+    bottom: 0;
+  }
+  100% {
+    bottom: 100%;
   }
 }
 /*# sourceMappingURL=style.css.map */
