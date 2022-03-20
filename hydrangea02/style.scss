@@ -1,0 +1,15 @@
+.loading {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  //   -webkit-align-items: center;
+  align-items: center;
+  //   -webkit-justify-content: center;
+  justify-content: center;
+  //   -webkit-flex-direction: column;
+  //   -ms-flex-direction: column;
+  flex-direction: column;
+}

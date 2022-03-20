@@ -1,1 +1,62 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+.loading {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.loading__elem {
+  position: relative;
+  overflow: hidden;
+}
+
+.loading__elem:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 5px;
+  -webkit-transition: 1s;
+  transition: 1s;
+  background: #cecece;
+  -webkit-animation: Top 4000ms ease-out forwards infinite;
+          animation: Top 4000ms ease-out forwards infinite;
+}
+
+.loading__elem:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  background: #cecece;
+  -webkit-animation: Right 4000ms ease-out forwards infinite;
+          animation: Right 4000ms ease-out forwards infinite;
+}
+
+@-webkit-keyframes Top {
+  0% {
+    width: 0;
+  }
+}
+
+@keyframes Top {
+  0% {
+    width: 0;
+  }
+}
+/*# sourceMappingURL=style.css.map */
