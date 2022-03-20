@@ -6,15 +6,19 @@
   top: 0;
   left: 0;
   background-color: #fff;
+  z-index: 9999;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -ms-flex-direction: column;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
           flex-direction: column;
 }
 
@@ -34,7 +38,7 @@
   transition: 1s;
   background: #cecece;
   -webkit-animation: loadaniTop 4000ms ease-out forwards infinite;
-          animation: loadaniTop 4000ms ease-out forwards infinite;
+  animation: loadaniTop 4000ms ease-out forwards infinite;
 }
 
 .loading__elem:after {
@@ -42,17 +46,18 @@
   position: absolute;
   top: 0;
   right: 0;
-  width: 0;
+  width: 5px;
   height: 0;
   -webkit-transition: 1s;
   transition: 1s;
   background: #cecece;
   -webkit-animation: loadaniRight 4000ms ease-out forwards infinite;
-          animation: loadaniRight 4000ms ease-out forwards infinite;
+  animation: loadaniRight 4000ms ease-out forwards infinite;
 }
 
 .loading__inner {
   position: relative;
+  padding: 100px;
 }
 
 .loading__inner:before {
@@ -66,7 +71,7 @@
   transition: 1s;
   background: #cecece;
   -webkit-animation: loadaniBottom 4000ms ease-out forwards infinite;
-          animation: loadaniBottom 4000ms ease-out forwards infinite;
+  animation: loadaniBottom 4000ms ease-out forwards infinite;
 }
 
 .loading__inner:after {
@@ -80,7 +85,7 @@
   transition: 1s;
   background: #cecece;
   -webkit-animation: loadaniLeft 4000ms ease-out forwards infinite;
-          animation: loadaniLeft 4000ms ease-out forwards infinite;
+  animation: loadaniLeft 4000ms ease-out forwards infinite;
 }
 
 .loading__inner--type2 {
@@ -204,6 +209,16 @@
   }
   100% {
     bottom: 100%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .loading__inner--type2 {
+    font-size: 16px;
+    padding: 5px 16px 5px;
+  }
+  .loading__inner--type2 span {
+    font-size: 36px;
   }
 }
 /*# sourceMappingURL=style.css.map */
