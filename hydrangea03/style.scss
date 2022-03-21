@@ -22,3 +22,50 @@
     animation: paripari 2000ms infinite linear;
   }
 }
+
+@keyframes paripari {
+  0% {
+    color: inherit;
+    text-shadow: inherit;
+  }
+  70% {
+    color: inherit;
+    text-shadow: inherit;
+  }
+  71% {
+    color: #514f53;
+    text-shadow: none;
+  }
+  72% {
+    color: inherit;
+    text-shadow: inherit;
+  }
+  73% {
+    color: inherit;
+    text-shadow: inherit;
+  }
+  74% {
+    color: #514f53;
+    text-shadow: none;
+  }
+  75% {
+    color: inherit;
+    text-shadow: inherit;
+  }
+  78% {
+    color: inherit;
+    text-shadow: inherit;
+  }
+  80% {
+    color: #514f53;
+    text-shadow: none;
+  }
+  83% {
+    color: inherit;
+    text-shadow: inherit;
+  }
+  100% {
+    color: inherit;
+    text-shadow: inherit;
+  }
+}
