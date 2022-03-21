@@ -1,1 +1,30 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+.paripari {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background: #000;
+}
+
+.paripariparipari {
+  font-family: sans-serif;
+  font-size: 10vw;
+  color: #dcd0e7;
+  letter-spacing: 0.1rem;
+  text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #d544ff, 0 0 0.5em #d544ff, 0 0 0.1em #d544ff, 0 10px 3px transparent;
+}
+
+.paripariparipari span {
+  color: #dcd0e7;
+  text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #d544ff, 0 0 0.5em #d544ff, 0 0 0.1em #d544ff, 0 10px 3px transparent;
+  -webkit-animation: paripari 2000ms infinite linear;
+          animation: paripari 2000ms infinite linear;
+}
+/*# sourceMappingURL=style.css.map */
